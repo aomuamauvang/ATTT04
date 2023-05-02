@@ -1,0 +1,6 @@
+Level 0->1: echo S1JZUFRPTklTR1JFQVQ= | base64 -d  -> KRYPTONISGREAT
+Level 1->2: just bruteforce all 26 possibility in /krypton/krypton1/: LEVEL-TWO-PASSWORD-ROTTEN -> ROTTEN
+Level 2->3: encrypted password is located in /krypton/krypton2/krypton3 -> OMQEMDUEQMEK. use previous program to brute-force this -> CAESARISEASY
+Level 3->4: use jCrypTool -> Analysis > Substitution Analysis and get the word. It is welldonethelevelfourpasswordisbrute -> BRUTE
+Level 4->5: knowing the key length is 6. We try https://www.dcode.fr/vigenere-cipher --> CLEARTEXT
+Level 5->6: to get the key length, put it in Vi breaker from jCrypTool, then use dcode.fr/vigenere-cipher to decode it. get the key keylength and get > RANDOM

@@ -1,0 +1,26 @@
+leviathan 0->1: flag found in hidden folder > bookmark.html file. cat and grep for "password"
+flag: PPIfmI1qsA
+
+leviathan 1->2: program check compare 2 strings. ltrace it and found out password is "sex", then get the ssh password in /etc/leviathan_pass/leviathan2
+flag: mEh5PNl10e
+
+leviathan 2->3: program printfile will cat a file while checking the permission. First will use function access() to see whether the file can be opened to print content out. Secondly it will use /bin/cat file_name to print the content out if it is accessable.
+create a file name "x;bash" in tmp directory, the ";" will seperate two different commands, so if we use printfile on x;bash file, it will basically:
+1. Check the availability of "x;bash", which is available because we have just created one under our privilege
+2. do the command: "/bin/cat x;bash", it means it does "/bin/cat x" and then "bash". Because the owner of printfile is Leviathan3, so "bash" will open up bash of Leviathan3.
+Then we will navigate to /etc/leviathan_pass/leviathan3 to find the password: Q0G8j4sakn
+
+leviathan 3->4: simply, just ltrace and find out the password, then you have the power of leviathan4 and cat the pass from pass directory: AgvropI4OA
+
+leviathan 4->5: well the password is in hidden folder > bin, then translate binary to ascii: EKKlTF1Xqs
+
+leviathan 5->6: just create file.log as symlink to where leviathan6 password is located.
+ln -s /etc/leviathan_pass/leviathan6 file.log
+then exec ./leviathan5 YZ55XPVk2l
+
+leviathan 6->7: just write a script in tmp directory to use ~/leviathan $i, which $i from {0000..9999}: 8GpZ5f8Hze
+
+
+
+
+
